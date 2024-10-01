@@ -14,6 +14,6 @@ int main() {
     for(int j=count-1; j>=0; j--){
         printf("% d", list[j]);
     }
-    
+    printf("\n");
     return 0;
 }
