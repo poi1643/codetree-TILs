@@ -17,6 +17,7 @@ for i in arr_n1:
             break
     if cnt == n2:
         flag2 = True
+        break
 
 if flag2:
     print('Yes')
