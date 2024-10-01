@@ -10,4 +10,6 @@ for i in range(n):
         cnt+=1
 
 for row in arr:
-    print(' '.join(map(str, row)))
+	for elem in row:
+		print(elem, end=" ")
+	print()
