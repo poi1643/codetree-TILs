@@ -2,17 +2,13 @@ n = int(input())
 
 arr = list(map(int, input().split()))
 
-max = 0
-exist = 0
+only_one = []
+set_arr = set(arr)
+for i in set_arr:
+    if arr.count(i) == 1:
+        only_one.append(i)
 
-for i in arr:
-    if i> max:
-        exist = 0
-        max = i
-    elif i == max:
-        exist = 1
-
-if exist == 1:
-    print(-1)
+if len(only_one) != 0:
+    print(max(only_one))
 else:
-    print(max)
+    print(-1)
