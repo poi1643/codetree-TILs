@@ -10,4 +10,5 @@ for i in arr:
     else:
         break
 
-print(result, result/float(num))
+avg = result/float(num)
+print('%d %.1f' %(result, avg))
