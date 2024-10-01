@@ -1,6 +1,6 @@
 n = int(input())
 
-arr = [1, 5]
+arr = [1, n]
 index = 2
 while True:
     a = arr[index-1] + arr[index -2]
