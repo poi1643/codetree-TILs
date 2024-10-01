@@ -1,6 +1,16 @@
 a = input()
 
-ee = a.replace('ee','*')
-eb = a.replace('eb', '*')
+cnt = 0
 
-print(ee.count('*'), eb.count('*'))
+for i in range(len(a)-1):
+    if a[i:i+2] == 'ee':
+        cnt += 1
+print(cnt, end=' ')
+
+cnt = 0
+
+for i in range(len(a)-1):
+    if a[i:i+2] == 'eb':
+        cnt += 1
+
+print(cnt)
