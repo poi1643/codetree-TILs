@@ -18,12 +18,9 @@ for i in range(q):
                 break
         if flag == 0:
             print(0)
-   
-
-
             
     if question[0] == 3:
         l, m = question[1], question[2]
-        
-        for j in arr[question[1]-1:question[2]]:
-            print(j, end= ' ')
+        for j in range(l-1, m):
+            print(arr[j], end =' ')
+        print('')
