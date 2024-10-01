@@ -3,7 +3,7 @@ n, m = map(int, input().split())
 arr1 = [list(map(int, input().split())) for _ in range(n)]
 arr2 = [list(map(int, input().split())) for _ in range(n)]
 
-result = [[1]*n for _ in range(m)]
+result = [[1]*m for _ in range(n)]
 
 for i in range(n):
     for j in range(m):
