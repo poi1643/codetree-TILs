@@ -12,4 +12,6 @@ for i in range(int(q)):
         print(k)
     elif n == '2':
         k = ''.join(s)
-        print(k.replace(a,b))
+        k = k.replace(a,b)
+        print(k)
+    s = list(k)
