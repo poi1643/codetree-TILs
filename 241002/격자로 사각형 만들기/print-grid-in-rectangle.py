@@ -1,6 +1,6 @@
 n = int(input())
 
-arr = [[0 for _ in range(5)]for _ in range(5)]
+arr = [[0 for _ in range(n)]for _ in range(n)]
 
 for i in range(n):
     arr[i][0] = 1
