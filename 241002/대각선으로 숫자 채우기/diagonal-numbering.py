@@ -4,7 +4,7 @@ arr = [[0] * m for _ in range(n)]
 cnt = 1
 for i in range(0, n*m):
     for j in range(0,i+1):
-        if(j<m and i-j < n):
+        if(j<n and i-j < m):
             arr[j][i-j] = cnt
             cnt+=1
             
