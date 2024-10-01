@@ -10,6 +10,9 @@ for i in char:
     else:
         count[-1] += 1
 
-print(len(count))
+result = ''
 for i in count:
-    print(i,end='')
+    result += str(i)
+
+print(len(result))
+print(result)
