@@ -11,4 +11,4 @@ for i in range(4):
     print(result/2, end=' ')
     all_sum += result
 print('')
-print(all_sum/8)
+print('%.1f'% (all_sum/8))
