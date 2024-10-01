@@ -1,9 +1,13 @@
 arr = list(map(int, input().split()))
 
-index = arr.index(0)
-if index != None:
-    for i in range(index-1, -1 ,-1):
-        print(arr[i], end =' ')
-else:
-    for i in arr[::-1]:
-        print(i, end = '')
+cnt = 0
+
+# 배열에 0이 있는지 확인합니다.
+for elem in arr:
+	if elem == 0:
+		break
+	cnt += 1
+
+# 0이 입력되기 전까지의 수를 반대 순서로 출력합니다.
+for i in range(cnt - 1, -1, -1):
+	print(arr[i], end=" ")
