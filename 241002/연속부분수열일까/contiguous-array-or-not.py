@@ -6,7 +6,7 @@ cnt = 0
 for i in range(n1):
     cnt = 0
     
-    if(arr_n1[i] == arr_n2[0]):
+    if(arr_n1[i] == arr_n2[0] and n1-i>=n2):
         for k in range(n2):
             if(arr_n1[i+k] == arr_n2[k]):
                 cnt += 1
