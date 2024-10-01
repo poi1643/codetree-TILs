@@ -4,7 +4,7 @@ arr = list(map(int, input().split()))
 result = []
 
 while True:
-    if len(arr)>=2:
+    if len(arr)>=1:
         a = arr.index(max(arr))
         result.append(arr.index(max(arr)))
         arr = arr[0:a]
