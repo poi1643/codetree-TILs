@@ -16,4 +16,6 @@ for i in range(m):
 
 
 for i in arr:
-    print(' '.join(map(str, i)))
+    for j in i:
+        print(j, end=' ')
+    print()
