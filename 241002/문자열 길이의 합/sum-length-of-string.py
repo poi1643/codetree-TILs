@@ -6,7 +6,7 @@ cnt = 0
 result = 0
 for i in arr:
     result += len(i)
-    if 'a' in i:
+    if i[0] == 'a':
         cnt += 1
 
 print(result, cnt)
