@@ -6,7 +6,7 @@ while True:
     a = int(a // b)
 
     result[c] += 1
-    if a == 0:
+    if a < 1:
         break
 
 k = 0
