@@ -2,14 +2,17 @@ N, S = map(int, input().split())
 
 arr = list(map(int, input().split()))
 
-all = sum(arr)
-a = 0
-b = 0
+all_ = sum(arr)
+
 result = 100000
 for i in range(N):
     for j in range(i+1,N):
         excluded = arr[i] + arr[j]
-        if abs(all - excluded) < result:
-            result = all - excluded
+        remained = all_ - excluded
+        
+        if abs(S-remained) < abs(result-S):
+            #print(remained)
+            result = remained
+
 
 print(abs(S - result))
