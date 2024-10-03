@@ -26,8 +26,8 @@ print(ans)
 
 n = int(input())
 
-result = [0] * 300
-place = 150
+result = [0] * 10000
+place = 500
 for _ in range(n):
     x, direction = input().split()
     x = int(x)
