@@ -15,11 +15,10 @@ for i in range(m1):
 target2 += d1
 
 
-num = target1 - target2
+num = target1 - target2-1
 
 
-if d1 == 9:
-    print(num)
+
 print(day[num%7])
 '''
 if num < 0:
