@@ -10,14 +10,14 @@ for i in range(n):
     
     if direction == 'L':
         for i in range(x):
-            status[place - i -1] = 1
-            white[place - i -1] += 1
-        place -= x
+            status[place - i] = 1
+            white[place - i] += 1
+        place -= (x-1)
     else:
         for i in range(x):
             status[place + i] = 2
             black[place + i] += 1
-        place += x
+        place += (x-1)
 
 gray_count = 0
 white_count = 0
