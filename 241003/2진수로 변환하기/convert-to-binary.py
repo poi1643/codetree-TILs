@@ -3,7 +3,7 @@ answer = []
 
 while True:
     if n < 2:
-        answer.append(1)
+        answer.append(n)
         break
     else:
         answer.append(n%2)
