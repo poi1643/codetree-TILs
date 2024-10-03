@@ -27,8 +27,8 @@ min_x = 10000
 flag = 0
 for i in range(2200):
     for j in range(2200):
-        flag = 1
         if result[i][j] == 1:
+            flag = 1
             if i < min_x:
                 min_x = i
             elif i > max_x:
