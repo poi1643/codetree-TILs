@@ -1,14 +1,4 @@
 n = int(input())
-
-answer = []
-
-while True:
-    if n == 1:
-        answer.append(1)
-        break
-    else:
-        answer.append(n%2)
-        n //= 2
-
-for i in answer[::-1]:
-    print(i,end='')
+n = str(bin(n))
+n = n.replace('0b','')
+print(n)
