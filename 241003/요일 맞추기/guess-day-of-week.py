@@ -17,7 +17,11 @@ target2 += d1
 
 num = target1 - target2
 
+
+print(day[num%7])
+'''
 if num < 0:
-    print(day[(num-1)//7])
+    print(day[(num-1)%7])
 else:
-    print(day[num//7])
+    print(day[num%7])
+    '''
