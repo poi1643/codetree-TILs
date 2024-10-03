@@ -15,8 +15,8 @@ x2 += 1000
 y1 += 1000
 y2 += 1000
 
-for i in range(x1, x2+1):
-    for j in range(y1, y2+1):
+for i in range(x1, x2):
+    for j in range(y1, y2):
         result[i][j] = 0
 
 
@@ -43,4 +43,4 @@ for i in range(2200):
 if flag == 0:
     print(0)
 else:
-    print((max_x - min_x + 1)*(max_y - min_y+ 1))
+    print((max_x - min_x+1)*(max_y - min_y+1))
