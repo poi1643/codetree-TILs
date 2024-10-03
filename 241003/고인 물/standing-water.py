@@ -13,7 +13,6 @@ for i in arr:
     for j in range(i):
         block[j][cnt] = 1
     cnt += 1
-    
 
 def find_left_wall(r, c):
     if r == 0:
@@ -33,7 +32,7 @@ def find_right_wall(r, c):
         else:
             return find_left_wall(r+1, c)
 
-for i in range(m):
+for i in range(m-1):
     for j in range(n):
         if block[j][i] == 0:
             if find_left_wall(i, j) and find_right_wall(i, j):
@@ -55,7 +54,5 @@ for i in range(m):
 ans = 0
 for i in block:
     ans += i.count(2)
-if n == 52:
-    print(8893)
-else:
-    print(ans)
+
+print(ans)
