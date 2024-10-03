@@ -1,4 +1,13 @@
 n = int(input())
-n = str(bin(n))
-n = n.replace('0b','')
-print(n)
+answer = []
+
+while True:
+    if n < 2:
+        answer.append(1)
+        break
+    else:
+        answer.append(n%2)
+        n //= 2
+
+for i in answer[::-1]:
+    print(i,end='')
