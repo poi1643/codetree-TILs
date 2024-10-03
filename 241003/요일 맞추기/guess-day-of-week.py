@@ -18,7 +18,7 @@ target2 += d1
 num = target1 - target2
 
 
-if d2 == 9:
+if d1 == 9:
     print(num)
 print(day[num%7])
 '''
