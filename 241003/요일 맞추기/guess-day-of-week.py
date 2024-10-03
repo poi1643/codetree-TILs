@@ -18,11 +18,8 @@ target2 += d1
 num = target1 - target2
 
 
-for i in range(8, -20, -1):
-    print(i%7)
-
-
-print(num)
+if d2 == 9:
+    print(num)
 print(day[num%7])
 '''
 if num < 0:
