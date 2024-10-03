@@ -6,11 +6,11 @@ for i in range(n):
     x, direction = input().split()
     x = int(x)
     if direction == 'L':
-        for i in range(x):
+        for i in range(1, x+1):
             result[place - i] += 1
         place -= x
     else:
-        for i in range(x):
+        for i in range(1, x+1):
             result[place + i] += 1
         place += x
 
