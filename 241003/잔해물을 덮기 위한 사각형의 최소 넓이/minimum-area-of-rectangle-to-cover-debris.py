@@ -24,9 +24,10 @@ max_x = 0
 max_y = 0
 min_y = 10000
 min_x = 10000
-
+flag = 0
 for i in range(2200):
     for j in range(2200):
+        flag = 1
         if result[i][j] == 1:
             if i < min_x:
                 min_x = i
@@ -39,4 +40,7 @@ for i in range(2200):
                 max_y = j
 
 #print(max_x, min_x, max_y, min_y)
-print((max_x - min_x)*(max_y - min_y))
+if flag == 0:
+    print(0)
+else:
+    print((max_x - min_x)*(max_y - min_y))
