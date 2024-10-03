@@ -35,33 +35,32 @@ n, a, b, c, d = map(int, input().split())
 
 min_energy = math.inf
 
-if a >= c:
-    for i in range(n // a + 1):
-        remaining_status = n - i * a
-        
-        if remaining_status > 0:
-            c_work = math.ceil(remaining_status / c)
-        else:
-            c_work = 0
-        
-        # 총 에너지 계산
-        total_energy = i * b + c_work * d
-        # 최소 에너지 갱신
-        min_energy = min(min_energy, total_energy)
+# 첫 번째 전략: a 작업을 먼저 사용하고 남은 것을 c 작업으로 처리
+for i in range(n // a + 1):
+    # i개의 a 작업을 사용한 후 남은 상태
+    remaining_status = n - i * a
+    if remaining_status > 0:
+        c_work = math.ceil(remaining_status / c)
+    else:
+        c_work = 0
+    
+    # 총 에너지 계산
+    total_energy = i * b + c_work * d
+    # 최소 에너지 갱신
+    min_energy = min(min_energy, total_energy)
 
-else:
-    for i in range(n // c + 1):
-        # 남은 상태
-        remaining_status = n - i * c
-        # 필요한 a 작업의 횟수
-        if remaining_status > 0:
-            a_work = math.ceil(remaining_status / a)
-        else:
-            a_work = 0
-        
-        # 총 에너지 계산
-        total_energy = i * d + a_work * b
-        # 최소 에너지 갱신
-        min_energy = min(min_energy, total_energy)
+# 두 번째 전략: c 작업을 먼저 사용하고 남은 것을 a 작업으로 처리
+for i in range(n // c + 1):
+    # i개의 c 작업을 사용한 후 남은 상태
+    remaining_status = n - i * c
+    if remaining_status > 0:
+        a_work = math.ceil(remaining_status / a)
+    else:
+        a_work = 0
+    
+    # 총 에너지 계산
+    total_energy = i * d + a_work * b
+    # 최소 에너지 갱신
+    min_energy = min(min_energy, total_energy)
 
 print(min_energy)
