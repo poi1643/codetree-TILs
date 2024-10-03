@@ -25,7 +25,7 @@ def find_left_wall(block, r, c):
             return find_left_wall(block, r-1, c)
 
 def find_right_wall(block, r, c):
-    if r == 5:
+    if r == m-1:
         return False
     else:
         if block[c][r+1] == 1:
