@@ -30,7 +30,7 @@ def find_right_wall(r, c):
         if block[c][r+1] == 1:
             return True
         else:
-            return find_left_wall(r+1, c)
+            return find_right_wall(r+1, c)
 
 for i in range(m-1):
     for j in range(n):
@@ -38,19 +38,7 @@ for i in range(m-1):
             if find_left_wall(i, j) and find_right_wall(i, j):
                 block[j][i] = 2
 
-
-
-
-'''
-for i in range(m):
-    for j in range(n):
-        if block[j][i] != 1:
-            if find_left_wall(block, i, j) and find_right_wall(block, i, j):
-                block[j][i] = 2
-'''
-
     
-
 ans = 0
 for i in block:
     ans += i.count(2)
