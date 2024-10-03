@@ -1,4 +1,7 @@
 n = input()
+print(int(n, 2))
+
+'''
 num = 0
 for i in n:
     a = num * 2
@@ -7,3 +10,4 @@ for i in n:
     
 
 print(num)
+'''
