@@ -35,32 +35,34 @@ n, a, b, c, d = map(int, input().split())
 
 min_energy = math.inf
 
-# 첫 번째 전략: a 작업을 먼저 사용하고 남은 것을 c 작업으로 처리
-for i in range(n // a + 1):
-    # i개의 a 작업을 사용한 후 남은 상태
-    remaining_status = n - i * a
-    if remaining_status > 0:
-        c_work = math.ceil(remaining_status / c)
-    else:
-        c_work = 0
-    
-    # 총 에너지 계산
-    total_energy = i * b + c_work * d
-    # 최소 에너지 갱신
-    min_energy = min(min_energy, total_energy)
+# 작업 효율 계산
+efficiency_a = a / b
+efficiency_c = c / d
 
-# 두 번째 전략: c 작업을 먼저 사용하고 남은 것을 a 작업으로 처리
-for i in range(n // c + 1):
-    # i개의 c 작업을 사용한 후 남은 상태
-    remaining_status = n - i * c
-    if remaining_status > 0:
-        a_work = math.ceil(remaining_status / a)
-    else:
-        a_work = 0
-    
-    # 총 에너지 계산
-    total_energy = i * d + a_work * b
-    # 최소 에너지 갱신
-    min_energy = min(min_energy, total_energy)
+# 효율이 높은 작업을 기준으로 먼저 처리
+if efficiency_a >= efficiency_c:
+    # a 작업이 더 효율적인 경우
+    for i in range(n // a + 1):
+        remaining_status = n - i * a
+        
+        if remaining_status > 0:
+            c_work = math.ceil(remaining_status / c)
+        else:
+            c_work = 0
+        
+        total_energy = i * b + c_work * d
+        min_energy = min(min_energy, total_energy)
+else:
+    # c 작업이 더 효율적인 경우
+    for i in range(n // c + 1):
+        remaining_status = n - i * c
+        
+        if remaining_status > 0:
+            a_work = math.ceil(remaining_status / a)
+        else:
+            a_work = 0
+        
+        total_energy = i * d + a_work * b
+        min_energy = min(min_energy, total_energy)
 
 print(min_energy)
