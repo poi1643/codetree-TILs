@@ -1,3 +1,6 @@
+import bisect
+
+# 입력 처리
 N, A, B = map(int, input().split())
 S_positions = []
 NS_positions = []
@@ -11,22 +14,37 @@ for _ in range(N):
     else:
         NS_positions.append(num)
 
+# S와 NS의 위치를 정렬
+S_positions.sort()
+NS_positions.sort()
+
+# 특정 위치에서 가장 가까운 S나 NS의 거리를 이분 탐색으로 찾는 함수
+def find_closest(positions, target):
+    if not positions:
+        return float('inf')
+    
+    idx = bisect.bisect_left(positions, target)
+    
+    closest_distance = float('inf')
+    
+    # 현재 위치에서 가까운 두 값 중 최소 거리를 반환
+    if idx < len(positions):
+        closest_distance = abs(positions[idx] - target)
+    if idx > 0:
+        closest_distance = min(closest_distance, abs(positions[idx - 1] - target))
+    
+    return closest_distance
+
 # 결과 계산
 count = 0
 
-# A부터 B까지 모든 숫자에 대해 가장 가까운 S와 NS를 각각 찾음
+# A부터 B까지 각 숫자에 대해 가장 가까운 S와 NS의 거리를 비교
 for num in range(A, B + 1):
-    # 가장 가까운 S를 찾음
-    s_distance = float('inf')
-    for s in S_positions:
-        s_distance = min(s_distance, abs(s - num))
-
-    # 가장 가까운 NS를 찾음
-    ns_distance = float('inf')
-    for ns in NS_positions:
-        ns_distance = min(ns_distance, abs(ns - num))
-
-    # S와 NS의 거리 비교
+    # 가장 가까운 S와 NS의 거리 계산
+    s_distance = find_closest(S_positions, num)
+    ns_distance = find_closest(NS_positions, num)
+    
+    # 조건에 맞으면 카운트 증가 (가까운 S가 더 가깝거나 거리가 같을 때)
     if s_distance <= ns_distance:
         count += 1
 
