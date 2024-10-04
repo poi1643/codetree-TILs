@@ -34,11 +34,19 @@ for i in range(1, m+1):
 
 
 x, y = len(a_status), len(b_status)
-for i in range(abs(x - y)):
-    if x <= y:
-        a_status.append(2000)
+while True:
+    if len(a_status) == max(x,y):
+        break
     else:
-        b_status.append(2000)
+        a_status.append(3000)
+
+while True:
+    if len(b_status) == max(x,y):
+        break
+    else:
+        b_status.append(3000)
+
+
 flag = 0
 for i in range(1, max(x, y)+1):
     if a_status[i] == b_status[i]:
