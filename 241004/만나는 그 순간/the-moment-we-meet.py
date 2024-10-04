@@ -33,21 +33,18 @@ for i in range(1, m+1):
             b_status.append(b_status[j-1] - 1)
 
 
-
-for i in range(abs(n-m)):
-    if n <= m:
+x, y = len(a_status), len(b_status)
+for i in range(abs(x - y)):
+    if x <= y:
         a_status.append(2000)
     else:
         b_status.append(2000)
 flag = 0
-for i in range(1, max(n,m)+1):
+for i in range(1, max(x, y)+1):
     if a_status[i] == b_status[i]:
         print(i)
         flag = 1
         break
 
-if flag == 1:
+if flag == 0:
     print(-1)
-
-print(a_status)
-print(b_status)
