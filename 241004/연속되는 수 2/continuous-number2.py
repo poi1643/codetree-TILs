@@ -16,6 +16,7 @@ for i in range(n):
             before = a
         else:
             cnt += 1
+result.append(cnt)
 
 
 print(max(result))
