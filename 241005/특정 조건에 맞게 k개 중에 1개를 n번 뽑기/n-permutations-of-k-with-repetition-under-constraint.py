@@ -10,7 +10,7 @@ def print_num(curr_num):
         return print()
     else:
         for i in target:
-            if len(curr_num) > 2:
+            if len(curr_num) >= 2:
                 if curr_num[-1] == curr_num[-2] == i:
                     continue
                 else:
