@@ -46,6 +46,12 @@ while True:
     else:
         b_status.append(3000)
 
+flag = 0
+for i in range(1, max(x, y)):
+    if a_status[i] == b_status[i]:
+        print(i)
+        flag = 1
+        break
 
-print(a_status, x)
-print(b_status, y)
+if flag == 0:
+    print(-1)
