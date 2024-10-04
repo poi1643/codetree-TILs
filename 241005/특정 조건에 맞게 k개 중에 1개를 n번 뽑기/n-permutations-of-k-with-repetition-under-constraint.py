@@ -15,6 +15,8 @@ def print_num(curr_num):
                     continue
                 else:
                     print_num(curr_num + i)
+            else:
+                print_num(curr_num+i)
         return
 
 if k == 1:
