@@ -6,6 +6,8 @@ for i in range(n):
     if i == 0:
         before = int(input())
         cnt += 1
+        if n == 1:
+            result.append(cnt)
     else:
         a = int(input())
         if a != before:
