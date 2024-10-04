@@ -17,5 +17,5 @@ def print_num(curr_num):
                 print_num(curr_num + i)
         return
 
-
-print_num('')
+if k > 1:
+    print_num('')
