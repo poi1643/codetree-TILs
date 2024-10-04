@@ -1,7 +1,7 @@
 n = input()
 if n == '1':
     print(0)
-elif '1' not in n:
+elif '0' not in n:
     print(int(n,2) -1)
 
 else:
