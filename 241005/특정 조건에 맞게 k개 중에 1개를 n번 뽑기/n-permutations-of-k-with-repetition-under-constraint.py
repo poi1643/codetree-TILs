@@ -17,5 +17,8 @@ def print_num(curr_num):
                 print_num(curr_num + i)
         return
 
-if k > 1:
+if k == 1:
+    if n < 3:
+        print_num('')
+else:
     print_num('')
