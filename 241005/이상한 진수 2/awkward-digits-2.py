@@ -1,6 +1,9 @@
 n = input()
 if n == '1':
     print(0)
+elif '1' not in n:
+    print(int(n,2) -1)
+
 else:
 
     n = list(n)
