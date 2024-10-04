@@ -2,7 +2,7 @@ n = input()
 
 if n == '1':
     print(0)
-elif '0' not in n:
+elif '0' not in list(n):
     print(int(n,2) - 1)
 
 else:
