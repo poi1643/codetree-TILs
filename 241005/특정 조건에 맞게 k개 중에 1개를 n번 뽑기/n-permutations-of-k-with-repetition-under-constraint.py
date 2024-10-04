@@ -13,8 +13,8 @@ def print_num(curr_num):
             if len(curr_num) > 2:
                 if curr_num[-1] == curr_num[-2] == i:
                     continue
-            else:
-                print_num(curr_num + i)
+                else:
+                    print_num(curr_num + i)
         return
 
 if k == 1:
