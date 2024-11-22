@@ -9,6 +9,7 @@ int main() {
     for(int i = 0; i < n; i++){
         for(int j = 0; j < i; j++) cout << "  ";
         for(int j = 0; j < n - i; j++){ 
+            if(a == 'Z') a = 'A' - 1;
             a = a + 1;
             cout << a << ' ';
         }
