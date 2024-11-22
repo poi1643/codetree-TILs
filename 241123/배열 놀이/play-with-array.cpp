@@ -17,7 +17,10 @@ int main() {
         }else if(qn == 2){
             int c = 0;
             for(int j = 1; j <= n; j++){
-                if(nn[j] == x) c = j; 
+                if(nn[j] == x){
+                    c = j;
+                    break;
+                } 
             }
             cout << c << '\n';
         }else{
