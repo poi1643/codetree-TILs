@@ -7,10 +7,9 @@ int main() {
     int count[7] = {};
     for(int i = 0; i < 10; i++){
         cin >> arr[i];
+        count[arr[i]]++;
     }
-    for(int j = 0; j < 10; j++){
-        count[arr[j]]++;
-    }
+
     for(int k = 1; k <= 6; k++){
         cout << k << " - " << count[k] << '\n';
     }
